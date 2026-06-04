@@ -1,20 +1,33 @@
 {
   "name": "fanjinde-seasons",
-  "displayName": "seasons",
-  "description": "seasons theme",
-  "version": "0.0.1",
+  "displayName": "Seasons",
+  "description": "Four light-and-winter color themes inspired by spring, summer, autumn, and winter.",
+  "version": "0.1.0",
   "engines": {
     "vscode": "^1.120.0"
   },
-  "categories": [
-    "Themes"
-  ],
+  "categories": ["Themes"],
   "contributes": {
     "themes": [
       {
-        "label": "Seasons",
+        "label": "Seasons: Spring",
         "uiTheme": "vs",
-        "path": "./themes/Seasons-color-theme.json"
+        "path": "./themes/spring-color-theme.json"
+      },
+      {
+        "label": "Seasons: Summer",
+        "uiTheme": "vs",
+        "path": "./themes/summer-color-theme.json"
+      },
+      {
+        "label": "Seasons: Autumn",
+        "uiTheme": "vs",
+        "path": "./themes/autumn-color-theme.json"
+      },
+      {
+        "label": "Seasons: Winter",
+        "uiTheme": "vs-dark",
+        "path": "./themes/winter-color-theme.json"
       }
     ]
   }

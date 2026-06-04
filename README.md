@@ -1,16 +1,30 @@
-# fanjinde-seasons README
+# Seasons
 
-## Working with Markdown
+A VS Code / Cursor color theme extension with four seasonal variants.
 
-You can author your README using Visual Studio Code. Here are some useful editor keyboard shortcuts:
+| Theme | Mood |
+|-------|------|
+| **Seasons: Spring** | Soft cream, blossom pink, fresh green |
+| **Seasons: Summer** | Bright sky blue, golden sun |
+| **Seasons: Autumn** | Warm parchment, rust and amber |
+| **Seasons: Winter** | Cool dark night, frost blue accents |
 
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux).
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux).
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets.
+## Try it locally
 
-## For more information
+1. Open this folder in VS Code or Cursor.
+2. Press **F5** to launch the Extension Development Host.
+3. **Cmd+K Cmd+T** (or **Ctrl+K Ctrl+T**) → choose **Seasons: Spring** (or Summer / Autumn / Winter).
 
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
+## Customize
 
-**Enjoy!**
+Palettes and UI colors are defined in `scripts/generate-season-themes.mjs`. After editing, run:
+
+```bash
+node scripts/generate-season-themes.mjs
+```
+
+Use **Developer: Inspect Editor Tokens and Scopes** to tune syntax scopes.
+
+## License
+
+See repository license (if added).

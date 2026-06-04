@@ -6,4 +6,13 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 
 ## [Unreleased]
 
-- Initial release
+## [0.1.0] - 2026-06-04
+
+### Added
+
+- Four color themes: **Seasons: Spring**, **Seasons: Summer**, **Seasons: Autumn** (light), and **Seasons: Winter** (dark).
+- `scripts/generate-season-themes.mjs` to regenerate theme JSON from shared token rules and per-season palettes.
+
+### Removed
+
+- Single **Seasons** theme file (`Seasons-color-theme.json`).

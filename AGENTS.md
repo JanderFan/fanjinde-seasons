@@ -5,15 +5,17 @@ Instructions for AI coding agents working on **fanjinde-seasons** — a VS Code 
 ## Project overview
 
 - **Type**: VS Code extension (category: Themes), no runtime code — only theme JSON and extension manifest.
-- **Theme**: Light base (`uiTheme`: `vs`), label **Seasons**.
-- **Token colors**: TextMate scopes in `themes/Seasons-color-theme.json`; UI colors in the same file under `colors`.
+- **Themes**: Four variants — **Seasons: Spring**, **Summer**, **Autumn** (light, `uiTheme`: `vs`) and **Winter** (dark, `uiTheme`: `vs-dark`).
+- **Token colors**: TextMate scopes in `themes/{spring,summer,autumn,winter}-color-theme.json`; UI colors in the same files under `colors`.
+- **Regenerate**: `node scripts/generate-season-themes.mjs` after editing palettes in the generator script.
 
 ## Project structure
 
 | Path | Purpose |
 |------|---------|
 | `package.json` | Extension manifest; `contributes.themes` points to the theme file |
-| `themes/Seasons-color-theme.json` | Color theme definition (`colors`, `tokenColors`) |
+| `themes/*-color-theme.json` | Per-season color theme (`colors`, `tokenColors`) |
+| `scripts/generate-season-themes.mjs` | Builds the four theme JSON files from palettes |
 | `.vscode/launch.json` | Extension Development Host (F5) |
 | `prettier.config.js` | Formatting for JSON/JS in the repo |
 | `CHANGELOG.md` | User-facing release notes (Keep a Changelog style) |
@@ -22,14 +24,14 @@ Instructions for AI coding agents working on **fanjinde-seasons** — a VS Code 
 
 ```bash
 # Format theme and config (if Prettier is available locally)
-npx prettier --write themes/Seasons-color-theme.json package.json
+npx prettier --write themes/*-color-theme.json package.json
 ```
 
 **In VS Code / Cursor**
 
-- **Run extension**: `F5` → Extension Development Host; pick **Seasons** via `Preferences: Color Theme` (`Ctrl+K Ctrl+T` / `Cmd+K Cmd+T`).
+- **Run extension**: `F5` → Extension Development Host; pick a **Seasons:** theme via `Preferences: Color Theme` (`Ctrl+K Ctrl+T` / `Cmd+K Cmd+T`).
 - **Inspect scopes**: Command Palette → `Developer: Inspect Editor Tokens and Scopes` — use when tuning `tokenColors` scopes.
-- **Theme edits**: Changes to `Seasons-color-theme.json` reload automatically in the Development Host window.
+- **Theme edits**: Changes to theme JSON reload automatically in the Development Host window (or re-run the generator after palette edits).
 
 **Publish** (human-driven; do not run unless asked)
 
