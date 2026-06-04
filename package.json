@@ -1,0 +1,21 @@
+{
+  "name": "fanjinde-seasons",
+  "displayName": "seasons",
+  "description": "seasons theme",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.120.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "contributes": {
+    "themes": [
+      {
+        "label": "Seasons",
+        "uiTheme": "vs",
+        "path": "./themes/Seasons-color-theme.json"
+      }
+    ]
+  }
+}
