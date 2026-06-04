@@ -28,3 +28,9 @@ Use **Developer: Inspect Editor Tokens and Scopes** to tune syntax scopes.
 ## License
 
 See repository license (if added).
+
+## package
+
+```bash
+vsce package  
+```
